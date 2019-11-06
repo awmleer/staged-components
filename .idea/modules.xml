@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/with-wrapper.iml" filepath="$PROJECT_DIR$/.idea/with-wrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/staged-components.iml" filepath="$PROJECT_DIR$/.idea/staged-components.iml" />
     </modules>
   </component>
 </project>
