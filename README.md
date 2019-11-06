@@ -20,7 +20,7 @@ So the component below will cause an error:
 const App = function(props) {
   if (props.user === undefined) return null
   const [name, setName] = useState(props.user.name)
-  // React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return
+  // React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?
   return (
     <input value={name} onChange={(e) => {setName(e.target.value)}}/>
   )
