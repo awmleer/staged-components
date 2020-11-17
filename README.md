@@ -48,7 +48,7 @@ Usage with `forwardRef`:
 ```jsx
 const App = forwardRef(staged((props, ref) => {
   if (props.user === undefined) return null
-  return () => { // stage 2
+  return () => {
     useImperativeHandle(ref, () => 'hello')
     return (
       <h1>{props.user.name}</h1>
