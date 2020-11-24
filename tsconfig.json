@@ -6,6 +6,7 @@
     "target": "es6",
     "module": "commonjs",
     "esModuleInterop": true,
+    "strictNullChecks": true,
     "jsx": "react",
     "lib": ["es6", "dom"],
     "outDir": "./lib"

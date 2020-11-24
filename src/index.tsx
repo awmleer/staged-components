@@ -1,10 +1,10 @@
 import React, {FC, PropsWithChildren, ReactElement, Ref, RefForwardingComponent} from 'react'
 
-type StageRender = () => StageRender | ReactElement
-type StageRenderRoot<P> = (props: PropsWithChildren<P>) => StageRender | ReactElement
-type StageRenderRootWithRef<P, R> = (props: PropsWithChildren<P>, ref: Ref<R>) => StageRender | ReactElement
+type StageRender = () => StageRender | ReactElement | null
+type StageRenderRoot<P> = (props: PropsWithChildren<P>) => StageRender | ReactElement | null
+type StageRenderRootWithRef<P, R> = (props: PropsWithChildren<P>, ref: Ref<R>) => StageRender | ReactElement | null
 
-function processNext(next: StageRender | ReactElement) {
+function processNext(next: StageRender | ReactElement | null) {
   if (typeof next === 'function') {
     return (
       <Stage stage={next} />
