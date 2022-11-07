@@ -56,3 +56,17 @@ const App = forwardRef(staged((props, ref) => {
   }
 }))
 ```
+
+```tsx
+type Props = {};
+type Ref = {};
+const App = forwardRef<Ref, Props>(
+  staged<Props, Ref>((props, ref) => {
+    if (props.user === undefined) return null;
+    return () => {
+      useImperativeHandle(ref, () => 'hello');
+      return <h1>{props.user.name}</h1>;
+    };
+  })
+);
+```
